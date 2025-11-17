@@ -7,7 +7,7 @@ st.markdown("## Plots")
 
 ## READ DATA
 data = pd.read_csv(
-    r'C:\Users\fahed\PycharmProjects\HospitalDashboard\data\Hospital.csv'
+    '../data/Hospital_Cleaned.csv'
 )
 
 #count Hospitals per sector

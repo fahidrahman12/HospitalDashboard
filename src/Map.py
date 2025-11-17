@@ -5,7 +5,8 @@ import pydeck as pdk
 st.title("🏥 England Hospitals Dashboard")
 st.markdown("## Map")
 #load data
-df= pd.read_csv(r'C:\Users\fahed\PycharmProjects\HospitalDashboard\data\Hospital_Cleaned.csv')
+df= pd.read_csv('../data/Hospital_Cleaned.csv'
+)
 
 df.info()
 ## show a quick summary
