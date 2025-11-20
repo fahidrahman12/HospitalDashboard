@@ -2,14 +2,14 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+import os
 st.markdown("## Plots")
 
 ## READ DATA
-data = pd.read_csv(
-    '../data/Hospital_Cleaned.csv'
+main_dir= os.path.dirname(os.path.abspath(__file__))
+df_path= os.path.join(main_dir, '..','..','data','Hospital_Cleaned.csv')
+data= pd.read_csv(df_path
 )
-
 #count Hospitals per sector
 sector_counts= data['Sector'].value_counts().reset_index()
 sector_counts.columns= ["Sector", "Count"]

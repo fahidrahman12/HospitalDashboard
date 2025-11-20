@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
+import os
 
 st.title("🏥 England Hospitals Dashboard")
 st.markdown("## Map")
 #load data
-df= pd.read_csv('../data/Hospital_Cleaned.csv'
+main_dir= os.path.dirname(os.path.abspath(__file__))
+df_path= os.path.join(main_dir, '..','data','Hospital_Cleaned.csv')
+df= pd.read_csv(df_path
 )
 
 df.info()
